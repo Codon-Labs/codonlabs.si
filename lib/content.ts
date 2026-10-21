@@ -9,7 +9,7 @@ export const site = {
     'https://calendar.google.com/calendar/appointments/schedules/AcZssZ0c3WjtMjcgxMstVzrR0oe1ZozVC2Gj0uQ6HAtA62n8nMxkjn1zu4yggscYTqJ3lauzCvH8de_g?gv=true',
   formEndpoint:
     'https://script.google.com/macros/s/AKfycbymh8XM3kQ3lI2_7Y7tjkSxhN0lhxqMwpP_ooTNg9PEy6AR0Nq1HT7IKjSZyBPw6gqe/exec',
-  fallbackEmail: 'shambhavi@codonlabs.si',
+  email: 'connect@codonlabs.si',
 };
 
 export const nav = [

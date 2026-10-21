@@ -148,7 +148,7 @@ function MessageForm() {
       setState('sent');
     } catch {
       setState('idle');
-      setError(`Something went wrong. Please email us at ${site.fallbackEmail}.`);
+      setError(`Something went wrong. Please email us at ${site.email}.`);
     }
   }
 

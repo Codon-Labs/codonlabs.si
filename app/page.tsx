@@ -1,5 +1,5 @@
 import type { CSSProperties } from 'react';
-import { engagements, founders, hero, manifesto, principles, services } from '@/lib/content';
+import { engagements, founders, hero, manifesto, principles, services, site } from '@/lib/content';
 import Intro from '@/components/Intro';
 import Nav from '@/components/Nav';
 import HeroHelix from '@/components/HeroHelix';
@@ -224,7 +224,14 @@ export default function Home() {
               Let&apos;s find your <span>start codon.</span>
             </h2>
             <div className="contact-row reveal">
-              <p>Tell us where your teams lose the most time. In 30 minutes we&apos;ll show you where AI can help first.</p>
+              <p>
+                Tell us where your teams lose the most time. In 30 minutes we&apos;ll show you where AI can help first.
+                <br />
+                Or write to us at{' '}
+                <a className="contact-mail" href={`mailto:${site.email}`}>
+                  {site.email}
+                </a>
+              </p>
               <div className="contact-actions">
                 <ModalButton tab="book" className="btn btn-light">
                   Book a call <Arrow />
@@ -250,7 +257,7 @@ export default function Home() {
               <a href="#use-cases">Use cases</a>
               <a href="#approach">Approach</a>
               <a href="#founders">Founders</a>
-              <a href="mailto:shambhavi@codonlabs.si">Email us</a>
+              <a href={`mailto:${site.email}`}>{site.email}</a>
             </div>
           </div>
           <div className="foot-word" aria-hidden="true">
