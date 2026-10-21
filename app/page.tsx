@@ -1,8 +1,7 @@
 import type { CSSProperties } from 'react';
 import { engagements, founders, hero, manifesto, principles, services, site } from '@/lib/content';
-import Intro from '@/components/Intro';
 import Nav from '@/components/Nav';
-import HeroHelix from '@/components/HeroHelix';
+import HeroScene from '@/components/HeroScene';
 import Decoder from '@/components/Decoder';
 import Manifesto from '@/components/Manifesto';
 import UseCases from '@/components/UseCases';
@@ -25,12 +24,17 @@ const sequence = (() => {
 export default function Home() {
   return (
     <>
-      <Intro />
       <Nav />
       <main id="top">
         {/* Hero */}
-        <section className="hero">
-          <HeroHelix />
+        <HeroScene
+          lockup={
+            <>
+              <span className="lk-word">codon labs</span>
+              <span className="lk-tag">AI-first consulting for pharma</span>
+            </>
+          }
+        >
           <div className="wrap hero-inner">
             <span className="tag rise">
               <i />
@@ -54,11 +58,13 @@ export default function Home() {
               <Decoder />
               <div className="scroll-cue">
                 <span />
-                Scroll to explore
+                Scroll to assemble
               </div>
             </div>
           </div>
-          <div className="sequence" aria-hidden="true">
+        </HeroScene>
+        <section className="seq-band" aria-hidden="true">
+          <div className="sequence">
             <div className="seq-track">
               {[...sequence, ...sequence].map((c, i) => (
                 <span key={i} className={c === 'ATG' ? 'start' : undefined}>

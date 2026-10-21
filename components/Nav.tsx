@@ -10,7 +10,7 @@ export default function Nav() {
   const [menu, setMenu] = useState(false);
 
   useEffect(() => {
-    const hero = document.querySelector('.hero') as HTMLElement | null;
+    const hero = document.querySelector('.hero, .hero3d') as HTMLElement | null;
     const onScroll = () => setSolid(scrollY > (hero ? hero.offsetHeight - 80 : 40));
     addEventListener('scroll', onScroll, { passive: true });
     onScroll();
