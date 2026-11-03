@@ -14,7 +14,6 @@ export const site = {
 
 export const nav = [
   { href: '#services', label: 'Services' },
-  { href: '#use-cases', label: 'Use cases' },
   { href: '#approach', label: 'Approach' },
   { href: '#faq', label: 'FAQ' },
 ];
@@ -66,69 +65,6 @@ export const services = [
   },
 ];
 
-export const useCases = [
-  {
-    code: 'ATG',
-    area: 'R&D and clinical',
-    items: [
-      ['Protocol and study documents', 'First drafts of protocols, consent forms and study plans from approved templates and prior studies.'],
-      ['Clinical study reports', 'CSR sections assembled from tables, listings and figures, ready for expert review.'],
-      ['Evidence synthesis', 'Screen and summarise the literature for reviews, dossiers and background sections.'],
-      ['Data review', 'Flag inconsistencies in study data and draft queries for your data managers.'],
-    ],
-  },
-  {
-    code: 'GCA',
-    area: 'Regulatory affairs',
-    items: [
-      ['Submission authoring', 'Draft CTD content and keep it consistent across every document in the dossier.'],
-      ['Health authority queries', 'Find precedent answers across past submissions and draft responses in hours.'],
-      ['Regulatory intelligence', 'Monitor new guidance and summarise what changes for your portfolio.'],
-      ['Labelling changes', 'Track label updates across markets and flag where they fall out of sync.'],
-    ],
-  },
-  {
-    code: 'TAC',
-    area: 'Pharmacovigilance',
-    items: [
-      ['Case intake and triage', 'Extract adverse-event data from emails, forms and calls into structured cases.'],
-      ['Case narratives', 'Draft narratives from structured case data for safety physician review.'],
-      ['Literature screening', 'Screen scientific literature for safety-relevant reports, every week, at scale.'],
-      ['Signal detection support', 'Surface emerging patterns across case data for medical evaluation.'],
-    ],
-  },
-  {
-    code: 'TTC',
-    area: 'Quality and compliance',
-    items: [
-      ['Deviation triage', 'Classify new deviations, suggest risk levels and pull up similar past cases.'],
-      ['Root cause and CAPA', 'Analyse historical records to propose root causes and track CAPA effectiveness.'],
-      ['SOP management', 'Draft, compare and update SOPs, and keep training records aligned.'],
-      ['Audit readiness', 'Answer auditor questions fast with search across your quality documentation.'],
-    ],
-  },
-  {
-    code: 'CAG',
-    area: 'Manufacturing and supply',
-    items: [
-      ['Batch record review', 'Review by exception: only the entries that need a human get a human.'],
-      ['Demand planning', 'Forecasts that learn from orders, tenders and market signals.'],
-      ['Predictive maintenance', 'Spot equipment problems in sensor data before they stop a line.'],
-      ['Tech transfer', 'Keep process knowledge structured as products move between sites.'],
-    ],
-  },
-  {
-    code: 'GAT',
-    area: 'Commercial and medical',
-    items: [
-      ['Content pre-review', 'Check promotional material against approved claims and references before MLR.'],
-      ['Medical information', 'Draft answers to HCP enquiries from approved standard responses.'],
-      ['Field insights', 'Turn field medical and sales notes into themes leadership can act on.'],
-      ['Market access dossiers', 'Assemble value dossiers and keep evidence current across markets.'],
-    ],
-  },
-] as const;
-
 export const approach = [
   {
     name: 'Read',
@@ -178,7 +114,7 @@ export const faqs: { q: string; a: string }[] = [
   },
   {
     q: 'Which pharma functions do you work with?',
-    a: 'Our use cases cover R&D and clinical, regulatory affairs, pharmacovigilance, quality and compliance, manufacturing and supply, and commercial and medical. If a process in your organisation is document-heavy, repetitive or hard to scale, we can usually map it and tell you honestly whether AI is the right fix.',
+    a: 'We work across R&D and clinical, regulatory affairs, pharmacovigilance, quality and compliance, manufacturing and supply, and commercial and medical. If a process in your organisation is document-heavy, repetitive or hard to scale, we can usually map it and tell you honestly whether AI is the right fix.',
   },
   {
     q: 'Can you help with AI implementation and digital transformation in a regulated GxP environment?',

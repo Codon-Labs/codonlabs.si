@@ -19,7 +19,7 @@
 html.no-intro { --intro: 0s; }
 html.no-intro .intro { display: none; }
 /* Screenshot mode (?shot): show everything in its final state */
-html.shot .reveal, html.shot .rise, html.shot .uc-card { opacity: 1; transform: none; animation: none; transition: none; }
+html.shot .reveal, html.shot .rise { opacity: 1; transform: none; animation: none; transition: none; }
 
 * { box-sizing: border-box; margin: 0; padding: 0; }
 body {
@@ -284,40 +284,6 @@ html.menu-open, html.menu-open body { overflow: hidden; }
 .svc ul { margin-top: auto; display: flex; flex-wrap: wrap; gap: 8px; }
 .svc li { font-size: 14px; font-weight: 500; padding: 7px 14px; border-radius: 999px; background: var(--soft); color: var(--ink); }
 
-/* Use cases */
-.uc { display: grid; grid-template-columns: minmax(260px, 1fr) 2.4fr; gap: clamp(20px, 3vw, 48px); align-items: start; }
-.uc-tabs { display: flex; flex-direction: column; border-top: 1px solid var(--line); }
-.uc-tabs button {
-  display: grid; grid-template-columns: 52px 1fr auto; align-items: center; gap: 12px;
-  text-align: left; background: none; border: 0; border-bottom: 1px solid var(--line);
-  padding: 20px 4px; cursor: pointer; color: var(--muted);
-  transition: color .3s, padding .4s var(--ease);
-}
-.uc-tabs button:hover { color: var(--ink); }
-.uc-tabs button[aria-selected="true"] { color: var(--ink); padding-left: 14px; }
-.uc-code { font-size: 12px; font-weight: 700; letter-spacing: .18em; color: var(--muted); }
-.uc-tabs button[aria-selected="true"] .uc-code { color: var(--blue); }
-.uc-area { font-size: 20px; font-weight: 500; letter-spacing: -.02em; }
-.uc-count { font-size: 12px; font-weight: 600; min-width: 26px; height: 26px; border-radius: 50%; display: grid; place-items: center; background: var(--soft); }
-.uc-tabs button[aria-selected="true"] .uc-count { background: var(--blue); color: #fff; }
-.uc-panel { background: var(--navy); color: #fff; border-radius: 28px; padding: clamp(26px, 3.4vw, 48px); position: relative; overflow: hidden; isolation: isolate; }
-.uc-panel::before { content: ""; position: absolute; inset: 0; z-index: -1; background: radial-gradient(60% 80% at 100% 0%, rgba(47, 91, 255, .35), transparent 70%); }
-.uc-panel-head { display: flex; align-items: baseline; gap: 16px; margin-bottom: 32px; }
-.uc-panel-head .uc-code { color: var(--blue-soft); }
-.uc-panel-head h3 { font-weight: 500; font-size: clamp(30px, 3vw, 44px); letter-spacing: -.04em; line-height: 1; }
-.uc-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; }
-.uc-card {
-  border: 1px solid var(--line-navy); border-radius: 18px; padding: 24px;
-  background: rgba(255, 255, 255, .03);
-  animation: card-in .6s var(--ease) both;
-  transition: background .3s, border-color .3s;
-}
-.uc-card:hover { background: rgba(255, 255, 255, .07); border-color: rgba(143, 176, 255, .4); }
-@keyframes card-in { from { opacity: 0; transform: translateY(14px); } }
-.uc-num { font-size: 12px; font-weight: 600; color: var(--blue-soft); letter-spacing: .1em; }
-.uc-card h4 { font-weight: 500; font-size: 21px; letter-spacing: -.025em; margin: 18px 0 8px; line-height: 1.2; }
-.uc-card p { font-size: 15px; color: var(--on-navy); line-height: 1.55; }
-
 /* Approach */
 .approach { background: var(--soft); }
 .ap { display: grid; grid-template-columns: 1fr 1.25fr; gap: clamp(32px, 6vw, 96px); }
@@ -470,12 +436,6 @@ html.menu-open, html.menu-open body { overflow: hidden; }
 
 /* ---------- Responsive ---------- */
 @media (max-width: 1000px) {
-  .uc { grid-template-columns: 1fr; }
-  .uc-tabs { flex-direction: row; overflow-x: auto; border-top: 0; gap: 8px; padding-bottom: 4px; scrollbar-width: none; }
-  .uc-tabs button { grid-template-columns: auto auto; border: 1px solid var(--line); border-radius: 999px; padding: 10px 16px; white-space: nowrap; }
-  .uc-tabs button[aria-selected="true"] { padding-left: 16px; background: var(--ink); color: #fff; border-color: var(--ink); }
-  .uc-tabs .uc-count { display: none; }
-  .uc-area { font-size: 15px; }
   .ap { grid-template-columns: 1fr; }
   .ap-sticky { position: static; }
   .ap-codon { display: none; }
@@ -497,7 +457,7 @@ html.menu-open, html.menu-open body { overflow: hidden; }
   .modal { padding: 0; place-items: end stretch; }
   .modal-panel { width: 100%; height: 94dvh; border-radius: 22px 22px 0 0; transform: translateY(40px); }
   .tabs button { padding: 9px 14px; }
-  .fields, .uc-grid { grid-template-columns: 1fr; }
+  .fields { grid-template-columns: 1fr; }
   .book-done { flex-direction: column; align-items: stretch; text-align: center; }
 }
 @media (max-width: 520px) {

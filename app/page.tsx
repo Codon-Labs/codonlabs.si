@@ -4,7 +4,6 @@ import Nav from '@/components/Nav';
 import HeroScene from '@/components/HeroScene';
 import Decoder from '@/components/Decoder';
 import Manifesto from '@/components/Manifesto';
-import UseCases from '@/components/UseCases';
 import Approach from '@/components/Approach';
 import Spotlight from '@/components/Spotlight';
 import { ModalButton } from '@/components/ContactModal';
@@ -129,19 +128,6 @@ export default function Home() {
                 </article>
               ))}
             </Spotlight>
-          </div>
-        </section>
-
-        {/* Use cases */}
-        <section className="block usecases" id="use-cases">
-          <div className="wrap">
-            <div className="head">
-              <p className="label reveal">Use cases</p>
-              <h2 className="reveal">
-                Where AI pays off <span>first.</span>
-              </h2>
-            </div>
-            <UseCases />
           </div>
         </section>
 
