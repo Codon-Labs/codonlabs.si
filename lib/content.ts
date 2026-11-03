@@ -147,15 +147,6 @@ export const approach = [
   },
 ];
 
-export const principles = [
-  ['Human in the loop', 'AI drafts, experts decide. Every workflow has clear review and sign-off points.'],
-  ['Validated by design', 'Audit trails, version control and risk-based validation are built in, not bolted on.'],
-  ['Your data stays yours', 'We design around your security and data-residency rules, and keep your data out of public model training.'],
-  ['Measured, not promised', 'Every project starts with a baseline and ends with numbers: cycle time, error rates, hours returned.'],
-  ['Vendor-neutral', 'We choose tools on fit, not partnerships, and build so you are never locked in.'],
-  ['Built for EU and global rules', 'Aligned with GAMP 5, EU GMP Annex 11 and draft Annex 22, the EU AI Act and FDA 21 CFR Part 11.'],
-];
-
 export const engagements = [
   {
     name: 'Discovery sprint',

@@ -1,5 +1,5 @@
 import type { CSSProperties } from 'react';
-import { engagements, faqs, hero, manifesto, principles, services, site } from '@/lib/content';
+import { engagements, faqs, hero, manifesto, services, site } from '@/lib/content';
 import Nav from '@/components/Nav';
 import HeroScene from '@/components/HeroScene';
 import Decoder from '@/components/Decoder';
@@ -149,27 +149,6 @@ export default function Home() {
         <section className="block approach" id="approach">
           <div className="wrap">
             <Approach />
-          </div>
-        </section>
-
-        {/* Principles */}
-        <section className="block principles" id="principles">
-          <div className="wrap">
-            <div className="head">
-              <p className="label reveal">How we build</p>
-              <h2 className="reveal">
-                AI an inspector <span>can follow.</span>
-              </h2>
-            </div>
-            <Spotlight className="pr-grid">
-              {principles.map(([title, text], i) => (
-                <div className="pr spot reveal" style={d(`${(i % 3) * 0.08}s`)} key={title}>
-                  <span className="pr-num">0{i + 1}</span>
-                  <h3>{title}</h3>
-                  <p>{text}</p>
-                </div>
-              ))}
-            </Spotlight>
           </div>
         </section>
 

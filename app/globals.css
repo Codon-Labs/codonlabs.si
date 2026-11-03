@@ -346,18 +346,6 @@ html.menu-open, html.menu-open body { overflow: hidden; }
 .ap-step ul { display: flex; flex-wrap: wrap; gap: 8px; }
 .ap-step li { font-size: 14px; font-weight: 500; padding: 7px 14px; border-radius: 999px; border: 1px solid var(--line); }
 
-/* Principles */
-.principles { background: var(--navy); color: #fff; position: relative; overflow: hidden; isolation: isolate; }
-.principles::before { content: ""; position: absolute; inset: 0; z-index: -1; background: radial-gradient(50% 60% at 0% 0%, rgba(47, 91, 255, .22), transparent 70%); }
-.principles .head h2 span { color: var(--blue-soft); }
-.principles .label { color: var(--blue-soft); }
-.pr-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: var(--line-navy); border: 1px solid var(--line-navy); border-radius: 24px; overflow: hidden; }
-.pr { background: var(--navy); padding: clamp(26px, 3vw, 40px); min-height: 260px; display: flex; flex-direction: column; }
-.pr.spot::before { background: radial-gradient(380px circle at var(--mx, 50%) var(--my, 50%), rgba(47, 91, 255, .22), transparent 60%); }
-.pr-num { font-size: 13px; font-weight: 600; color: var(--blue-soft); }
-.pr h3 { font-weight: 500; font-size: clamp(22px, 2vw, 28px); letter-spacing: -.03em; line-height: 1.15; margin: 48px 0 12px; }
-.pr p { color: var(--on-navy); font-size: 15.5px; }
-
 /* Engagements */
 .en-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
 .en {
@@ -492,7 +480,6 @@ html.menu-open, html.menu-open body { overflow: hidden; }
   .ap-sticky { position: static; }
   .ap-codon { display: none; }
   .ap-step { min-height: 0; opacity: 1; transform: none; }
-  .pr-grid { grid-template-columns: repeat(2, 1fr); }
   .en-grid { grid-template-columns: 1fr; }
   .en { min-height: 0; }
   .en h3 { margin-top: 36px; }
@@ -510,9 +497,7 @@ html.menu-open, html.menu-open body { overflow: hidden; }
   .modal { padding: 0; place-items: end stretch; }
   .modal-panel { width: 100%; height: 94dvh; border-radius: 22px 22px 0 0; transform: translateY(40px); }
   .tabs button { padding: 9px 14px; }
-  .fields, .uc-grid, .pr-grid { grid-template-columns: 1fr; }
-  .pr { min-height: 0; }
-  .pr h3 { margin-top: 28px; }
+  .fields, .uc-grid { grid-template-columns: 1fr; }
   .book-done { flex-direction: column; align-items: stretch; text-align: center; }
 }
 @media (max-width: 520px) {
