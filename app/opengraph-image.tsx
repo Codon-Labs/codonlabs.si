@@ -1,6 +1,6 @@
 import { ImageResponse } from 'next/og';
 
-export const alt = 'Codon Labs — Pharma, translated.';
+export const alt = 'Codon Labs: Pharma, translated.';
 export const size = { width: 1200, height: 630 };
 export const contentType = 'image/png';
 
@@ -28,7 +28,7 @@ export default function OpengraphImage() {
             <circle cx="36" cy="90" r="12.5" fill="#fff" />
             <circle cx="88" cy="60" r="12.5" fill="#2F5BFF" />
           </svg>
-          codon labs
+          Codon Labs
         </div>
         <div style={{ display: 'flex', flexDirection: 'column' }}>
           <div style={{ fontSize: 120, fontWeight: 500, letterSpacing: -6, lineHeight: 1 }}>Pharma,</div>

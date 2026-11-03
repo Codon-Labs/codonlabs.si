@@ -16,7 +16,7 @@ export const nav = [
   { href: '#services', label: 'Services' },
   { href: '#use-cases', label: 'Use cases' },
   { href: '#approach', label: 'Approach' },
-  { href: '#founders', label: 'Founders' },
+  { href: '#faq', label: 'FAQ' },
 ];
 
 export const hero = {
@@ -174,7 +174,55 @@ export const engagements = [
   },
 ];
 
-export const founders = [
-  { initials: 'RV', name: 'Rohan Vyas', role: 'Founder', linkedin: 'https://www.linkedin.com/in/rohan-vyas/', email: 'rohan@codonlabs.si' },
-  { initials: 'SJ', name: 'Shambhavi Jha', role: 'Co-founder', linkedin: 'https://www.linkedin.com/in/shambhavijha15/', email: 'shambhavi@codonlabs.si' },
+// Same twelve questions as a typical consultancy FAQ, answered for Codon Labs' services and use cases.
+// Cost and timeline answers are deliberately not numeric: edit them here once you want to publish ranges.
+export const faqs: { q: string; a: string }[] = [
+  {
+    q: 'What is Codon Labs and what services do you offer?',
+    a: 'Codon Labs is an AI-first consultancy for the pharmaceutical industry. We offer four services: AI readiness and roadmap, automation and AI agents, GxP-ready AI and validation, and enablement and operating model. In short, we find where your processes lag and turn them into compliant AI systems that run themselves, from the lab bench to the market.',
+  },
+  {
+    q: 'How is Codon Labs different from large consultancies and generic AI vendors?',
+    a: 'We work only in pharma, so validation, audit trails and data integrity are designed in from day one rather than added at the end. We are vendor-neutral, choosing tools on fit and building so you are never locked in. And we stay with the work from the first process map to a validated, adopted system, with every project starting from a baseline and ending in measured results.',
+  },
+  {
+    q: 'Which pharma functions do you work with?',
+    a: 'Our use cases cover R&D and clinical, regulatory affairs, pharmacovigilance, quality and compliance, manufacturing and supply, and commercial and medical. If a process in your organisation is document-heavy, repetitive or hard to scale, we can usually map it and tell you honestly whether AI is the right fix.',
+  },
+  {
+    q: 'Can you help with AI implementation and digital transformation in a regulated GxP environment?',
+    a: 'Yes, that is our focus. We assess your processes, data and governance, rank the opportunities by value, risk and effort, then build and validate the solutions with your quality team. Our approach is aligned with GAMP 5, EU GMP Annex 11, draft Annex 22, the EU AI Act and FDA 21 CFR Part 11, so what we deliver is something an inspector can follow.',
+  },
+  {
+    q: 'What AI and automation solutions do you build?',
+    a: 'Agentic workflows and AI agents for document-heavy work: drafting protocols and regulatory content, assembling clinical study report sections, triaging deviations and adverse-event cases, reviewing batch records by exception, and pre-reviewing promotional material. We connect them to the systems you already use, such as QMS, RIM, safety and ERP, with human-in-the-loop controls at every review and sign-off point.',
+  },
+  {
+    q: 'How much does an engagement cost?',
+    a: 'It depends on scope, so we do not quote a one-size-fits-all price. Most clients start with a discovery sprint, a fixed-scope piece of work that maps one function and ends with a costed roadmap. After that, a pilot and a scale partnership are scoped around the use cases you choose. We agree the price in writing before any work begins.',
+  },
+  {
+    q: 'What is the typical project timeline?',
+    a: 'A discovery sprint is short and focused on a single function. A pilot builds one high-value use case end to end, validated and measured in your environment. A scale partnership runs longer, across functions. We set the timeline with you up front, and our readiness work always includes a 90-day implementation plan so you can see what happens and when.',
+  },
+  {
+    q: 'Do you provide support after the system goes live?',
+    a: 'Every project ends with trained owners, clear ownership and a KPI plan, so your team can run and grow the system without us. If you want us involved after go-live, a scale partnership covers new use cases, governance and value tracking, and helps you build your own in-house AI capability.',
+  },
+  {
+    q: 'Can you build AI assistants for medical information and pharmacovigilance?',
+    a: 'Yes. For medical information, we draft answers to healthcare professional enquiries from your approved standard responses. For pharmacovigilance, we extract adverse-event data from emails, forms and calls into structured cases, draft case narratives and screen literature. In both, AI prepares the work and your qualified experts review and decide.',
+  },
+  {
+    q: 'Do you offer AI consulting and strategy services?',
+    a: 'Yes. Our AI readiness and roadmap service covers process and data maturity, a prioritised use-case portfolio, a business case for each use case, and a 90-day implementation plan. We also set up AI governance frameworks, including AI risk classification, so your quality team can sign off the roadmap.',
+  },
+  {
+    q: 'What technologies and standards do you work with?',
+    a: 'We choose technology per project, based on fit, security and your existing landscape, and we design around your data-residency rules and keep your data out of public model training. On the compliance side we work to GAMP 5, EU GMP Annex 11, draft Annex 22, the EU AI Act and FDA 21 CFR Part 11.',
+  },
+  {
+    q: 'How do I get started with Codon Labs?',
+    a: 'Book a 30-minute call and tell us where your teams lose the most time. We will show you where AI can help first and suggest the right starting point, usually a discovery sprint. You can also write to us at connect@codonlabs.si.',
+  },
 ];

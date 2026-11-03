@@ -1,5 +1,5 @@
 import type { CSSProperties } from 'react';
-import { engagements, founders, hero, manifesto, principles, services, site } from '@/lib/content';
+import { engagements, faqs, hero, manifesto, principles, services, site } from '@/lib/content';
 import Nav from '@/components/Nav';
 import HeroScene from '@/components/HeroScene';
 import Decoder from '@/components/Decoder';
@@ -8,7 +8,8 @@ import UseCases from '@/components/UseCases';
 import Approach from '@/components/Approach';
 import Spotlight from '@/components/Spotlight';
 import { ModalButton } from '@/components/ContactModal';
-import { Arrow, LinkedIn, LogoMark } from '@/components/Icons';
+import Faq from '@/components/Faq';
+import { Arrow, LogoMark } from '@/components/Icons';
 
 const d = (delay: string) => ({ '--d': delay }) as CSSProperties;
 
@@ -22,15 +23,21 @@ const sequence = (() => {
 })();
 
 export default function Home() {
+  const faqJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: faqs.map((f) => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })),
+  };
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />
       <Nav />
       <main id="top">
         {/* Hero */}
         <HeroScene
           lockup={
             <>
-              <span className="lk-word">codon labs</span>
+              <span className="lk-word">Codon Labs</span>
               <span className="lk-tag">AI-first consulting for pharma</span>
             </>
           }
@@ -190,35 +197,16 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Founders */}
-        <section className="block founders" id="founders">
+        {/* FAQ */}
+        <section className="block faq-sec" id="faq">
           <div className="wrap">
             <div className="head">
-              <p className="label reveal">Founders</p>
+              <p className="label reveal">FAQ</p>
               <h2 className="reveal">
-                The people <span>behind the sequence.</span>
+                Frequently asked <span>questions.</span>
               </h2>
             </div>
-            <div className="people">
-              {founders.map((f, i) => (
-                <div className={`person reveal${i ? ' co' : ''}`} style={d(`${i * 0.1}s`)} key={f.name}>
-                  <div className="initials">{f.initials}</div>
-                  <div className="who">
-                    <h3>{f.name}</h3>
-                    <p className="role">{f.role}</p>
-                    <div className="person-links">
-                      <a className="li" href={f.linkedin} target="_blank" rel="noopener noreferrer">
-                        <LinkedIn />
-                        LinkedIn
-                      </a>
-                      <a className="li" href={`mailto:${f.email}`}>
-                        {f.email}
-                      </a>
-                    </div>
-                  </div>
-                </div>
-              ))}
-            </div>
+            <Faq />
           </div>
         </section>
 
@@ -252,27 +240,12 @@ export default function Home() {
       </main>
 
       <footer className="footer">
-        <div className="wrap">
-          <div className="foot-top">
-            <a href="#top" className="brand">
-              <LogoMark />
-              codon labs
-            </a>
-            <div className="foot-links">
-              <a href="#services">Services</a>
-              <a href="#use-cases">Use cases</a>
-              <a href="#approach">Approach</a>
-              <a href="#founders">Founders</a>
-              <a href={`mailto:${site.email}`}>{site.email}</a>
-            </div>
+        <div className="wrap foot-row">
+          <div className="foot-links">
+            <a href="/privacy">Privacy</a>
+            <a href="/terms">Terms &amp; Conditions</a>
           </div>
-          <div className="foot-word" aria-hidden="true">
-            codon labs
-          </div>
-          <div className="foot-bottom">
-            <span>© {new Date().getFullYear()} Codon Labs</span>
-            <span>AI-first consulting for pharma</span>
-          </div>
+          <p className="foot-copy">© 2026 Codon Labs · All rights reserved.</p>
         </div>
       </footer>
     </>

@@ -22,7 +22,7 @@ export default function Intro() {
           <circle className="base b3" cx="88" cy="60" r="12.5" />
         </svg>
         <div className="intro-word">
-          <span>codon labs</span>
+          <span>Codon Labs</span>
         </div>
       </div>
     </div>

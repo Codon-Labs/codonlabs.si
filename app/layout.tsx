@@ -10,10 +10,10 @@ const sans = Hanken_Grotesk({ subsets: ['latin'], variable: '--font-sans', displ
 
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
-  title: { default: 'Codon Labs — AI-first consulting for pharma', template: '%s · Codon Labs' },
+  title: { default: 'Codon Labs | AI-first consulting for pharma', template: '%s · Codon Labs' },
   description: site.description,
   openGraph: {
-    title: 'Codon Labs — Pharma, translated.',
+    title: 'Codon Labs: Pharma, translated.',
     description: 'AI-first consulting for the pharmaceutical industry.',
     url: '/',
     siteName: 'Codon Labs',

@@ -26,7 +26,7 @@ export default function Nav() {
       <div className="wrap nav-row">
         <a href="#top" className="brand" aria-label="Codon Labs home" onClick={() => setMenu(false)}>
           <LogoMark />
-          codon labs
+          Codon Labs
         </a>
         <div className="links">
           {nav.map((l) => (
