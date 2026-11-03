@@ -2,7 +2,7 @@ import type { ReactNode } from 'react';
 import { LogoMark } from './Icons';
 
 // Shared shell for the Privacy and Terms pages
-export default function LegalPage({ title, updated, children }: { title: string; updated: string; children: ReactNode }) {
+export default function LegalPage({ title, updated, byline, children }: { title: string; updated?: string; byline?: string; children: ReactNode }) {
   return (
     <>
       <header className="legal-top">
@@ -17,7 +17,7 @@ export default function LegalPage({ title, updated, children }: { title: string;
       <main className="legal">
         <div className="wrap">
           <h1>{title}</h1>
-          <p className="updated">Last updated: {updated}</p>
+          <p className="updated">{byline ?? `Last updated: ${updated}`}</p>
           {children}
         </div>
       </main>

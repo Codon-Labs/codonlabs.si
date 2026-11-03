@@ -10,16 +10,33 @@ const sans = Hanken_Grotesk({ subsets: ['latin'], variable: '--font-sans', displ
 
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
-  title: { default: 'Codon Labs | AI-first consulting for pharma', template: '%s · Codon Labs' },
+  title: { default: 'Codon Labs | GxP-ready AI consulting for pharma', template: '%s · Codon Labs' },
   description: site.description,
   openGraph: {
     title: 'Codon Labs: Pharma, translated.',
-    description: 'AI-first consulting for the pharmaceutical industry.',
+    description: 'GxP-ready AI consulting and automation for the pharmaceutical industry.',
     url: '/',
     siteName: 'Codon Labs',
     type: 'website',
   },
   twitter: { card: 'summary_large_image' },
+};
+
+const orgJsonLd = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'Organization',
+      '@id': `${site.url}/#org`,
+      name: site.name,
+      url: site.url,
+      logo: `${site.url}/icon.svg`,
+      description: site.description,
+      email: site.email,
+      contactPoint: { '@type': 'ContactPoint', contactType: 'sales', email: site.email },
+    },
+    { '@type': 'WebSite', '@id': `${site.url}/#website`, url: site.url, name: site.name, publisher: { '@id': `${site.url}/#org` } },
+  ],
 };
 
 export const viewport: Viewport = { themeColor: '#081A33' };
@@ -32,6 +49,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="en" className={sans.variable} suppressHydrationWarning>
       <head>
         <script dangerouslySetInnerHTML={{ __html: introScript }} />
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(orgJsonLd) }} />
       </head>
       <body>
         <ContactModalProvider>

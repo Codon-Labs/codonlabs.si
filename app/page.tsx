@@ -1,4 +1,5 @@
 import type { CSSProperties } from 'react';
+import type { Metadata } from 'next';
 import { engagements, faqs, hero, manifesto, services, site } from '@/lib/content';
 import Nav from '@/components/Nav';
 import HeroScene from '@/components/HeroScene';
@@ -9,6 +10,8 @@ import Spotlight from '@/components/Spotlight';
 import { ModalButton } from '@/components/ContactModal';
 import Faq from '@/components/Faq';
 import { Arrow, LogoMark } from '@/components/Icons';
+
+export const metadata: Metadata = { alternates: { canonical: '/' } };
 
 const d = (delay: string) => ({ '--d': delay }) as CSSProperties;
 
@@ -104,7 +107,7 @@ export default function Home() {
             <div className="head">
               <p className="label reveal">What we do</p>
               <h2 className="reveal">
-                One partner, from <span>first idea to validated system.</span>
+                AI consulting for pharma, from <span>first idea to validated system.</span>
               </h2>
             </div>
             <Spotlight className="svc-grid">

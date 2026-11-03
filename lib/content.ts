@@ -4,7 +4,7 @@ export const site = {
   name: 'Codon Labs',
   url: 'https://codonlabs.si',
   description:
-    'Codon Labs is an AI-first consultancy for the pharmaceutical industry. We find where your processes lag and translate them into compliant AI systems that run themselves.',
+    'AI consulting for pharma. We build GxP-ready AI and automation for regulatory, pharmacovigilance, quality, clinical and manufacturing teams, from roadmap to validation.',
   bookingUrl:
     'https://calendar.google.com/calendar/appointments/schedules/AcZssZ0c3WjtMjcgxMstVzrR0oe1ZozVC2Gj0uQ6HAtA62n8nMxkjn1zu4yggscYTqJ3lauzCvH8de_g?gv=true',
   formEndpoint:
@@ -12,15 +12,19 @@ export const site = {
   email: 'connect@codonlabs.si',
 };
 
+import { insights } from './insights';
+
 export const nav = [
   { href: '#services', label: 'Services' },
   { href: '#approach', label: 'Approach' },
   { href: '#faq', label: 'FAQ' },
+  // The Insights link appears automatically once the first article is published
+  ...(insights.length ? [{ href: '/insights', label: 'Insights' }] : []),
 ];
 
 export const hero = {
   tag: 'AI-first consultancy for the pharmaceutical industry',
-  lede: 'We find where your processes lag and translate them into compliant AI systems that run themselves, from the lab bench to the market.',
+  lede: 'We find where your processes lag and translate them into compliant, GxP-ready AI systems that run themselves, from the lab bench to the market.',
 };
 
 export const decoderPairs: [string, string][] = [

@@ -434,6 +434,15 @@ html.menu-open, html.menu-open body { overflow: hidden; }
 .legal ul { list-style: disc; padding-left: 22px; margin-bottom: 14px; }
 .legal a { color: var(--blue); text-decoration: underline; text-underline-offset: 3px; }
 
+/* Insights list */
+.ins-list li { border-top: 1px solid var(--line); margin: 0; }
+.ins-list { list-style: none; padding: 0; }
+.ins-list a { display: block; padding: 28px 0; text-decoration: none; color: inherit; }
+.ins-list time { font-size: 14px; color: var(--muted); }
+.ins-list h2 { margin: 6px 0 8px; }
+.ins-list a:hover h2 { color: var(--blue); }
+.ins-list p { margin: 0; }
+
 /* ---------- Responsive ---------- */
 @media (max-width: 1000px) {
   .ap { grid-template-columns: 1fr; }
